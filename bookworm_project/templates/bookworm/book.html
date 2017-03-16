@@ -1,0 +1,31 @@
+{% extends 'Bookworm/base.html' %}
+
+{% block title_block %}
+	title by author name
+{% endblock %}
+
+{% block style_block %}
+    <style>
+    div#bookpage {
+        display: block;
+    }
+    img#book {
+        margin-top: 5%;
+        margin-left: 25%;
+        width: 200px;
+        height: 300px;
+    }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+    <div id="bookpage">
+        <img id="book">
+        <ul id="bookinfo">
+            <li>Bull</li>
+            <li>Bull</li>
+            <li>Bull</li>
+            <li>Bull</li>
+        </ul>
+    </div>
+{% endblock %}
