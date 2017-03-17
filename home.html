@@ -1,0 +1,118 @@
+{% extends 'Bookworm/base.html' %}
+
+{% block title_block %}
+    Home
+{% endblock %}
+
+{% block style_block %}
+    <style>
+        div#homebody {
+            display: inline;
+        }
+        ul2 {
+            list-style-type: none;
+            overflow: hidden;
+        }
+        li2 a{
+            text-decoration: none;
+            padding: .2em 1em;
+            color: whitesmoke;
+            background-color: deepskyblue;
+        }
+        li2 a:hover {
+            background-color: dodgerblue;
+        }
+        table {
+            float:left;
+            margin-left: 10%;
+            width: 30%;
+            margin-right: 5%;
+        }
+        h1#PopularBooks {
+            margin-left: 10%;
+            font-size:160%;
+        }
+        h1#RecBooks {
+            margin-top: 0%;
+            font-size:160%;
+        }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+
+    <div>
+        <h2 style="text-align:center;"><strong><a style="color: black; text-decoration: none;" href="{% url 'show_genre' %}">Genres</a></strong></h2>
+    </div>
+
+    <hr>
+
+    <div id="homebody">
+        <h1 id="PopularBooks"><strong>Popular Books</strong></h1>
+        <h1 id="RecBooks"><strong>Recommended Books</strong></h1>
+    </div>
+
+    <table>
+
+            <tr>
+                <td><a href="www.google.co.uk"><img src = "J'onn_and_his_wife.jpg" alt="j'onn" style="width:152px;height:228px;"/></a></td>
+                <td>
+                    <ul>
+                        Book Title
+                        <ul>
+                            <li> Book Detail </li>
+                        </ul>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="www.google.co.uk"><img src = "J'onn_and_his_wife.jpg" alt="j'onn" style="width:152px;height:228px;"/></a></td>
+                <td>
+                    <ul>
+                        Book Title
+                        <ul>
+                            <li> Book Detail </li>
+                        </ul>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="www.google.co.uk"><img src = "J'onn_and_his_wife.jpg" alt="j'onn" style="width:152px;height:228px;"/></a></td>
+                <td>
+                    <ul>
+                        Book Title
+                        <ul>
+                            <li> Book Detail </li>
+                        </ul>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="www.google.co.uk"><img src = "J'onn_and_his_wife.jpg" alt="j'onn" style="width:152px;height:228px;"/></a></td>
+                <td>
+                    <ul>
+                        Book Title
+                        <ul>
+                            <li> Book Detail </li>
+                        </ul>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><a href="www.google.co.uk"><img src = "J'onn_and_his_wife.jpg" alt="j'onn" style="width:152px;height:228px;"/></a></td>
+                <td>
+                    <ul>
+                        Book Title
+                        <ul>
+                            <li> Book Detail </li>
+                        </ul>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+{% endblock %}
