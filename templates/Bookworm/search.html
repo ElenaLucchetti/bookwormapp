@@ -1,0 +1,37 @@
+{% extends "Bookworm/base.html" %}
+
+{% load static %}
+
+{% block title %}Search{% endblock %}
+
+{% block body_block %}
+<div class="hero-unit">
+	<h1>Search with Bookworm</h1>
+	<br/>
+
+	<div class="container-fluid">
+		<form class="span8 form-search" id="search_form" method="post" action="/Bookworm/search/">
+ 			{% csrf_token %}
+ 			<!-- Display the search form elements here -->
+ 		<input type="text" size="50" name="query" value="" id="query" />
+		<button type="submit" class="btn btn-success" name="submit" value="Search">Search</button> 			<br />
+ 		</form>
+	</div>
+	
+	
+	<div class="container-fluid">
+		
+		{% if result_list %}
+		<!-- Display search results in an ordered list -->
+		<ol>
+		{% for result in result_list %}
+			<li>
+				<strong><a href="{{ result.link }}">{{ result.title }}</a></strong><br />
+				<p>{{ result.summary }}</p>
+			</li>
+		{% endfor %}
+		</ol>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}
